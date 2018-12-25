@@ -1,0 +1,39 @@
+<div class="container">
+  <form [formGroup]="create" (ngSubmit)="onSubmit()">
+    <button>Save</button>
+    <div class="col-md-12">
+      <div class="row">
+
+        <div class="col-md-4 bg-danger">
+          <input type="checkbox" formControlName="isDispatcher"> <label>Dispatcher</label>
+          <h5><strong>User Details</strong></h5>
+          <input type="text" readonly="true" class="form-control" placeholder="Center Desplay ID">
+          <img src="https://img.resized.co/image_ie/eyJkYXRhIjoie1widXJsXCI6XCJodHRwczpcXFwvXFxcL3MzLWV1LXdlc3QtMS5hbWF6b25hd3MuY29tXFxcL3N0b3JhZ2UucHVibGlzaGVycGx1cy5pZVxcXC9tZWRpYS5pbWFnZS5pZVxcXC91cGxvYWRzXFxcLzIwMTdcXFwvMTJcXFwvMTgxODAwNTZcXFwvaWFuLXNjaG5laWRlci0xMDg2MTgtZTE1MTM1OTk5MjY0OTEtMzExeDMxMS5qcGdcIixcIndpZHRoXCI6MzEwLFwiaGVpZ2h0XCI6MzExLFwiZGVmYXVsdFwiOlwiaHR0cHM6XFxcL1xcXC93d3cuaW1hZ2UuaWVcXFwvaW1hZ2VzXFxcL25vLWltYWdlLnBuZz92PTJcIn0iLCJoYXNoIjoiYjgxZmEwZmU3OGUxZTg2NzFjOGY0ZDI0ZmVkZDdmNDlmYTM5ZTNhMiJ9/ian-schneider-108618-e1513599926491-311x311.jpg">
+          <div class="btn-group">
+            <button class="btn btn-danger">ok</button>
+            <button class="btn btn-dark">nok</button>
+          </div>
+          <h5><strong>Login Details</strong></h5>
+          <input type="checkbox" formControlName="loginType"> <label>Login by Phonenumber</label>
+          <input type="password" class="form-control" placeholder="Password" formControlName="password">
+        </div>
+        <div class="col-md-4 bg-dark">
+          <input type="checkbox" formControlName="isDriver"> <label>Driver</label>
+          <input type="text" class="form-control" placeholder="First Name" formControlName="firstName">
+          <input type="email" class="form-control" placeholder="Email" formControlName="email">
+          <input type="text" class="form-control" placeholder="ID Number(for Driver)" formControlName="carrierCompanyId">
+          <input type="checkbox" formControlName="loginType"> <label>Login by email</label>
+          <input type="password" class="form-control" placeholder="Confirm Password" formControlName="cpassword">
+        </div>
+        <div class="col-md-4 bg-primary">
+          <input type="text" class="form-control" placeholder="Last Name" formControlName="lastName">
+          <input type="text" class="form-control" placeholder="Phone Number" formControlName="phoneNumber">
+          <input type="text" class="form-control" placeholder="Phone Number" formControlName="phoneNumber">
+          <mat-slide-toggle formControlName="isActive">Active</mat-slide-toggle>
+        </div>
+
+      </div>
+    </div>
+  </form>
+  <app-usertable></app-usertable>
+</div>
