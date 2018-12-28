@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 
@@ -8,9 +8,18 @@ import { MatPaginator } from '@angular/material/paginator';
   styleUrls: ['./usertable.component.scss']
 })
 export class UsertableComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  displayedColumns: string[] = [
+    'Title',
+    'Document(s)',
+    'Expiry Date',
+    'Mandatory',
+    'Active',
+    'Action'
+  ];
+  ELEMENT_DATA: PeriodicElement[] = [];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
-
+  @Input('carrierUserRequirements')
+  set setListDocument(list: any) {}
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   ngOnInit() {

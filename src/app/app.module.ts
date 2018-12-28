@@ -12,9 +12,21 @@ import { UsertableComponent } from './user/usertable/usertable.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDialogModule } from '@angular/material/dialog';
-
+import { UserpopupComponent } from './user/userpopup/userpopup.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatButtonModule } from '@angular/material/button';
+import { MatRadioModule } from '@angular/material/radio';
 @NgModule({
-  declarations: [AppComponent, UserComponent, UsertableComponent],
+  entryComponents: [UserComponent, UserpopupComponent],
+  declarations: [
+    AppComponent,
+    UserComponent,
+    UsertableComponent,
+    UserpopupComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -25,7 +37,13 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatTableModule,
     MatPaginatorModule,
     MatDialogModule,
-    FormsModule
+    FormsModule,
+    MatIconModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatCheckboxModule,
+    MatButtonModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

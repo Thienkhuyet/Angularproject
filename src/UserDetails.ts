@@ -1,4 +1,4 @@
-export type UserRole = 'Phone' | 'Phone';
+export type UserRole = "Phone" | "Phone";
 export interface User {
   id: string; // fix
   carrierUserDisplayID: null; // luôn null
