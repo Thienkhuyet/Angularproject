@@ -1,0 +1,101 @@
+<div mat-dialog-title>
+  <div col-12>
+    <div class="row">
+      <div class="col-10">
+        <h2>Add Document</h2>
+      </div>
+      <div class="col-2" (click)="onClose()">
+
+        <mat-icon>close</mat-icon>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+</div>
+<mat-dialog-content class="mat-typography" style="width: 700px; height: 600px;">
+  <form [formGroup]="documentForm">
+    <div class="col-md-12" style="overflow: hidden">
+      <div class="row">
+        <div class="col-md-6">
+
+          <mat-form-field class="example-full-width">
+
+            <input type="text" matInput formControlName="requirementTitle">
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group row">
+            <mat-checkbox class="col-sm-1" style="padding-top: 23px" (change)="onChang($event.checked)"></mat-checkbox>
+            <div class="col-sm-10">
+              <mat-form-field>
+                <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="expiryDate">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+              <mat-error *ngIf="documentForm.get('expiryDate').hasError('ErrorsTime')">*out of date</mat-error>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12" style="overflow: hidden">
+      <div class="row">
+        <div class="col-md-6">
+
+          <mat-form-field class="example-full-width">
+            <input type="text" matInput formControlName="referenceValue1" placeholder="Value 1 ">
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field>
+            <input matInput placeholder="Value 2" formControlName="referenceValue2">
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12" style="overflow: hidden">
+      <div class="row">
+        <div class="col-md-6">
+
+          <mat-slide-toggle formControlName="isActive">Active</mat-slide-toggle>
+
+        </div>
+        <div class="col-md-6">
+
+          <mat-slide-toggle formControlName="isMandatory">Mandatory</mat-slide-toggle>
+
+        </div>
+      </div>
+    </div>
+
+
+  </form>
+  <div class="col-md-12" style="overflow: hidden">
+    <input style="display: none" type="file" (change)="onFileChanged($event)" #fileInput>
+    <button mat-raised-button color="primary" (click)="fileInput.click()">Upload Document</button>
+    <div *ngIf="notDisplayed">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-7">
+            <mat-form-field class="example-full-width">
+              <input type="text" matInput value="Front License">
+            </mat-form-field>
+          </div>
+          <div class="col-md-1">
+            <mat-icon style="margin-top: 10px" (click)="deleteFile()">delete</mat-icon>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button [disabled]="documentForm.invalid || documentForm.pristine" style="float: right" (click)="onSubmit()">Save</button>
+  <!-- <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Save</button> -->
+</mat-dialog-actions>
