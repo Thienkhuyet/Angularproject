@@ -1,0 +1,73 @@
+{
+  "users": {
+    "id": "C93FD91D-A544-4C86-8214-D19F8191EE04",
+    "carrierUserDisplayID": null,
+    "carrierCompanyId": "7EA98F7D-3181-49CF-96C9-31C4369460E3",
+    "firstName": "Carrier",
+    "lastName": "User 1",
+    "email": "testcmcglobal13@ezyhaul.com",
+    "password": "aA@123456",
+    "phoneNumber": "124457829",
+    "identityCardNumber": null,
+    "isActive": true,
+    "loginType": "Email",
+    "loginEmail": "testcmcglobal13@ezyhaul.com",
+    "login": "login",
+    "profileImage": null,
+    "isDispatcher": false,
+    "isDriver": false,
+    "carrierUserRequirements": [{
+        "id": null,
+        "carrierUserId": null,
+        "requirementTitle": "reqTitle 1",
+        "expiryDate": null,
+        "referenceValue1": "ref 1",
+        "referenceValue2": "ref 2",
+        "isMandatory": true,
+        "isActive": true,
+        "isDeleted": true,
+        "carrierUserRequirementDocuments": [{
+            "id": null,
+            "carrierUserRequirementId": null,
+            "documentName": "documentName 1",
+            "documentLink": "documentLink 1",
+            "isDeleted": true
+          },
+          {
+            "id": null,
+            "carrierUserRequirementId": null,
+            "documentName": "documentName 2",
+            "documentLink": "documentLink 2",
+            "isDeleted": false
+          }
+        ]
+      },
+      {
+        "id": null,
+        "carrierUserId": null,
+        "requirementTitle": "reqTitle 2",
+        "expiryDate": null,
+        "referenceValue1": "ref 1",
+        "referenceValue2": "ref 2",
+        "isMandatory": true,
+        "isActive": true,
+        "isDeleted": false,
+        "carrierUserRequirementDocuments": [{
+            "id": null,
+            "carrierUserRequirementId": null,
+            "documentName": "documentName 1",
+            "documentLink": "documentLink 1",
+            "isDeleted": true
+          },
+          {
+            "id": null,
+            "carrierUserRequirementId": null,
+            "documentName": "documentName 2",
+            "documentLink": "documentLink 2",
+            "isDeleted": false
+          }
+        ]
+      }
+    ]
+  }
+}

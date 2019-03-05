@@ -1,4 +1,4 @@
-export type UserRole = "Phone" | "Phone";
+export type UserRole = 'Phone' | 'Phone';
 export interface User {
   id: string; // fix
   carrierUserDisplayID: null; // luôn null
@@ -16,7 +16,7 @@ export interface User {
   profileImage: null;
   isDispatcher: boolean;
   isDriver: boolean;
-  carrierUserRequirements: Array<any>;
+  carrierUserRequirements: Array<CarrierUserRequirements>;
 }
 export interface CarrierUserRequirements {
   id: string;
@@ -28,7 +28,7 @@ export interface CarrierUserRequirements {
   isMandatory: boolean;
   isActive: boolean;
   isDeleted: boolean;
-  carrierUserRequirementDocuments: [];
+  carrierUserRequirementDocuments: Array<CarrierUserRequirementDocuments>;
 }
 export interface CarrierUserRequirementDocuments {
   id: string;
